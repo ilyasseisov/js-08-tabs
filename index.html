@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS100::08 - Tabs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="tabs-component">
+      <ul class="tabs">
+        <li class="tab active" data-panel="#one">
+          <span class="title">Bitcoin</span>
+        </li>
+        <li class="tab" data-panel="#two">
+          <span class="title">Litecoin</span>
+        </li>
+        <li class="tab" data-panel="#three">
+          <span class="title">USD Coin</span>
+        </li>
+        <div class="slider"></div>
+      </ul>
+      <div class="panels">
+        <div id="one" class="panel show">
+          <div class="content">
+            <div class="content-img">
+              <img src="img/btc.png" />
+            </div>
+            <div class="content-title">Bitcoin</div>
+            <div class="content-paragraph">
+              Bitcoin is a decentralized digital currency, without a central
+              bank or single administrator, that can be sent from user to user
+              on the peer-to-peer bitcoin network without the need for
+              intermediaries.
+            </div>
+          </div>
+        </div>
+        <div id="two" class="panel">
+          <div class="content">
+            <div class="content-img">
+              <img src="img/ltc.png" />
+            </div>
+            <div class="content-title">Litecoin</div>
+            <div class="content-paragraph">
+              Litecoin is a peer-to-peer cryptocurrency and open-source software
+              project released under the MIT/X11 license. Litecoin was an early
+              bitcoin spinoff or altcoin, starting in October 2011. Supply limit
+              is 84,000,000 LTC
+            </div>
+          </div>
+        </div>
+        <div id="three" class="panel">
+          <div class="content">
+            <div class="content-img">
+              <img src="img/usd.png" />
+            </div>
+            <div class="content-title">USD Coin</div>
+            <div class="content-paragraph">
+              USD Coin is a digital stablecoin that is pegged to the United
+              States dollar. USD Coin is managed by a consortium called Centre,
+              which was founded by Circle including members from the Coinbase.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="circle one"></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
