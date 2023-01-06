@@ -15,9 +15,14 @@ body {
 }
 
 .tabs-component {
+  margin-top: -40px;
   width: 320px;
+  position: relative;
   @media (max-width: 575.9px) {
     width: 300px;
+  }
+  @media (max-width: 400px) {
+    width: 240px;
   }
 
   .tabs {
@@ -97,9 +102,14 @@ body {
         &-img {
           margin-bottom: 16px;
           img {
-            // background: rgb(158, 255, 210);
             max-width: 100px;
             vertical-align: middle;
+            @media (max-width: 575.9px) {
+              max-width: 80px;
+            }
+          }
+          @media (max-width: 575.9px) {
+            margin-bottom: 12px;
           }
         }
         &-title {
@@ -108,11 +118,18 @@ body {
           font-weight: 900;
           margin-bottom: 16px;
           color: $color-grey-5;
+          @media (max-width: 575.9px) {
+            font-size: 16px;
+            margin-bottom: 12px;
+          }
         }
         &-paragraph {
           font-size: 16px;
           font-weight: 400;
           color: $color-grey-4;
+          @media (max-width: 575.9px) {
+            font-size: 14px;
+          }
         }
       }
 
@@ -152,12 +169,16 @@ body {
   opacity: 0.7;
   filter: blur(0px);
 
+  @media (max-width: 400px) {
+    display: none;
+  }
+
   &.one {
     width: 200px;
     height: 200px;
     background: $gradient-yellow;
-    top: 63%;
-    left: 53%;
+    bottom: -80px;
+    right: -80px;
     z-index: -1;
     box-shadow: $shadow-yellow;
     background: radial-gradient(
@@ -166,19 +187,11 @@ body {
       $color-yellow-dark
     );
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 220px;
-      height: 220px;
-      border-radius: 100%;
-      opacity: 0.3;
-      background: $gradient-yellow;
-      z-index: -1;
-      box-shadow: $shadow-yellow;
-      filter: blur(20px);
+    @media (max-width: 575.9px) {
+      width: 100px;
+      height: 100px;
+      bottom: -40px;
+      right: -40px;
     }
   }
 }

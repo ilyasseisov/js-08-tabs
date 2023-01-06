@@ -25,11 +25,18 @@ body {
 }
 
 .tabs-component {
+  margin-top: -40px;
   width: 320px;
+  position: relative;
 }
 @media (max-width: 575.9px) {
   .tabs-component {
     width: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .tabs-component {
+    width: 240px;
   }
 }
 .tabs-component .tabs {
@@ -103,16 +110,37 @@ body {
   max-width: 100px;
   vertical-align: middle;
 }
+@media (max-width: 575.9px) {
+  .tabs-component .panels .panel .content-img img {
+    max-width: 80px;
+  }
+}
+@media (max-width: 575.9px) {
+  .tabs-component .panels .panel .content-img {
+    margin-bottom: 12px;
+  }
+}
 .tabs-component .panels .panel .content-title {
   font-size: 20px;
   font-weight: 900;
   margin-bottom: 16px;
   color: #292d34;
 }
+@media (max-width: 575.9px) {
+  .tabs-component .panels .panel .content-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+}
 .tabs-component .panels .panel .content-paragraph {
   font-size: 16px;
   font-weight: 400;
   color: #7c828d;
+}
+@media (max-width: 575.9px) {
+  .tabs-component .panels .panel .content-paragraph {
+    font-size: 14px;
+  }
 }
 .tabs-component .panels .panel.show {
   display: block;
@@ -143,29 +171,28 @@ body {
   opacity: 0.7;
   filter: blur(0px);
 }
+@media (max-width: 400px) {
+  .circle {
+    display: none;
+  }
+}
 .circle.one {
   width: 200px;
   height: 200px;
   background: linear-gradient(45deg, rgb(245, 205, 81) 0%, rgb(247, 206, 81) 100%);
-  top: 63%;
-  left: 53%;
+  bottom: -80px;
+  right: -80px;
   z-index: -1;
   box-shadow: 0 10px 25px rgba(245, 205, 81, 0.4);
   background: radial-gradient(circle at 100px 100px, #f7ce51, #f5cd51);
 }
-.circle.one::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 220px;
-  height: 220px;
-  border-radius: 100%;
-  opacity: 0.3;
-  background: linear-gradient(45deg, rgb(245, 205, 81) 0%, rgb(247, 206, 81) 100%);
-  z-index: -1;
-  box-shadow: 0 10px 25px rgba(245, 205, 81, 0.4);
-  filter: blur(20px);
+@media (max-width: 575.9px) {
+  .circle.one {
+    width: 100px;
+    height: 100px;
+    bottom: -40px;
+    right: -40px;
+  }
 }
 
 .jssecrets {
